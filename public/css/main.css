@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    font-family: "Play", sans-serif;
+    --pink: #FF77EC;
+    --blue: #5371FF;
+    --transparentblue: #758af0;
+    --accentblue: #d9dfff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Play", sans-serif;
+    background-color: var(--accentblue);
+    font-size: .8vw;
+  }
+
+ nav {
+    background-color: #5371FF;
+    height: 4vh;
+    padding: .2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav>*, nav>*>* {
+    color: var(--accentblue); /*#d9dfff;*/
+    text-decoration: none;
+}
+
+.nav-center-section {
+    order: 1;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    width: 50vw;
+    margin-left: -22vw;    
+}
+
+.nav-center-section>* {
+    margin: 0 auto;
+}
+
+.address-box-container {
+    border-radius: .3em;
+    padding: .3em;
+    font-size: 1.1vw;
+    text-wrap: nowrap;
+    margin-left: 1vw;
+}
+
+.logo {
+    font-size: 1.8vw;
+    order: 0;
+    color: var(--pink);
+}
+
+.nav-icons-section {
+    order: 2;
+    font-size: 1.75vw;
+    width: 5.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-icons-section>* {
+    border-radius: .2em;
+    padding: .75vh;
+    width: 3vh;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icons-section>*:hover {
+    background-color: var(--transparentblue);
+}
+
+form.search-bar {
+    width: 35vw;
+    height: 3vh;
+    background-color: var(--transparentblue);
+    border-radius: 25vw;
+    border: 0px solid var(--pink);
+    align-items: center;
+    display: flex;
+    align-content: center;
+    padding: 0.1vh 0.3vw 0.3vh 1vw;
+    margin-left: 2vw;
+}
+
+form.search-bar>input:focus {
+    outline: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+
+form.search-bar>input {
+    width: 100%;
+    height: 3vh;
+    margin-left: auto;
+    border-radius: 25vw;
+    background-color: transparent;
+    color: white;
+    font-size: 1vw;
+    margin-top: .3vh;
+    border: none;
+}
+
+form.search-bar>input::placeholder {
+    color: #d9dfff;
+}

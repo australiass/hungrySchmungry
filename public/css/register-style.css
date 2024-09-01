@@ -1,0 +1,99 @@
+/* Help from https://codepen.io/harishpalsande9/pen/LYKVKJp */
+
+.container {
+  width: 25vw;
+  background: var(--transparentblue);
+  padding: 5vh 1vw;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px black;
+  border: 4px solid var(--pink);
+  margin: auto;
+  margin-top: 10vh;
+}
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form-group label {
+  align-self: flex-start;
+  padding-left: 4.5vw;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+.form-group input {
+  width: 15vw;
+  padding: .8em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+.form-group input:focus {
+border-color: #ff6a00;
+}
+.form-group button {
+  width: 80%;
+  padding: 12px;
+  margin-top: 1.2vh;
+  border: none;
+  border-radius: 8px;
+  background: var(--pink);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, transform 0.3s;
+}
+.form-group button:hover {
+  background: var(--pink);
+  transform: scale(1.05);
+}
+.form-group button:active::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s linear;
+}
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+.toggle-link {
+  text-align: center;
+  margin-top: 25px;
+  color: var(--pink);
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.toggle-link:hover {
+  transform: scale(1.02);
+}
+
+#errorMessage {
+  color: white;
+  background-color: rgba(255, 67, 67, 0.528);
+  padding: 3px;
+  border-radius: 25em;
+  text-align: center;
+  width: 60%;
+  margin: 2.5vh auto;
+}

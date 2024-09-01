@@ -1,0 +1,97 @@
+
+:root {
+    --debug: 0px solid red;
+}
+
+.menuHeader {
+    text-align: center;
+    width: 40vw;
+    border-bottom: 3px dashed var(--pink);
+    margin: 0 auto;
+    padding-bottom: 1vh;
+    margin-bottom: 5vh;
+}
+
+#menuContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 80vw;
+    border: var(--debug);
+}
+
+.storePanel {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+    border: var(--debug);
+    max-width: inherit;
+}
+
+.storeTitle {
+    height: 5vh;
+    border-bottom: .1em solid var(--transparentblue);
+    margin: 0 auto;
+    margin-bottom: 1vh;
+    display: flex;
+    font-size: 2vw;
+    width: 80vw;
+    font-weight: bold;
+    
+}
+
+.itemPanelContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+    overflow: auto;
+    border: var(--debug);
+    padding: 2vh 1vw;
+}
+
+.itemPanelContainer>.itemPanel {
+    box-shadow: 1.5px 1.5px 8px black;
+    background: rgb(165,210,255);
+    background: linear-gradient(0deg, rgba(117,138,240,1) 0%, rgba(117, 137, 240, 0.455) 100%);
+    border-radius: .2vw;
+    word-wrap: break-word;
+    margin-right: 2vw;
+    min-width: 10vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.price {
+    margin-bottom: 0;
+    border: 1px solid red;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.itemPanelContainer::-webkit-scrollbar-track:empty {
+    display: none;
+}
