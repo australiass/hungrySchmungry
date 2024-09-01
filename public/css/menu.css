@@ -44,31 +44,25 @@
 .itemPanelContainer {
     display: flex;
     flex-direction: row;
-    max-width: 80vw;
     overflow: auto;
     border: var(--debug);
     padding: 2vh 1vw;
 }
 
 .itemPanelContainer>.itemPanel {
-    box-shadow: 1.5px 1.5px 8px black;
-    background: rgb(165,210,255);
-    background: linear-gradient(0deg, rgba(117,138,240,1) 0%, rgba(117, 137, 240, 0.455) 100%);
-    border-radius: .2vw;
-    word-wrap: break-word;
-    margin-right: 2vw;
-    min-width: 10vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
+	width: clamp(12vw, 12vw, 12vw);
+	height: clamp(25vh, 25vh, 25vh);
+	margin-right: 5vw;
+
+	background-color: var(--transparentblue);
+	box-shadow: 1.5px 1.5px 8px black;
+	font-size: 0.9vw;
+	border: 2px solid green;
 }
 
-.price {
-    margin-bottom: 0;
-    border: 1px solid red;
-    font-size: 1.2vw;
-    font-weight: bold;
+.itemPanel>* {
+	border: 1px solid red;
+	margin: 0;
 }
 
 /* Scrollbar */
