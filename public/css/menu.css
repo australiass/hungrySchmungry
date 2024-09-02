@@ -44,25 +44,52 @@
 .itemPanelContainer {
     display: flex;
     flex-direction: row;
+    width: 100%;
     overflow: auto;
     border: var(--debug);
     padding: 2vh 1vw;
 }
 
 .itemPanelContainer>.itemPanel {
-	width: clamp(12vw, 12vw, 12vw);
-	height: clamp(25vh, 25vh, 25vh);
+    display: flex;
+    flex-direction: column;
+
+	min-width: 12vw;
+    max-width: 12vw;
+	min-height: 13vw;
+    max-height: 13vw;
 	margin-right: 5vw;
 
 	background-color: var(--transparentblue);
-	box-shadow: 1.5px 1.5px 8px black;
+	box-shadow: 0 0 10px 2px black;
 	font-size: 0.9vw;
-	border: 2px solid green;
+    border-radius: 3%;
+    padding: 0.5vw;
 }
 
 .itemPanel>* {
-	border: 1px solid red;
 	margin: 0;
+}
+
+.itemPanel>.ingredients {
+    margin-top: 2vh;
+}
+
+.itemPanel>.bottom {
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:end;
+}
+
+.itemPanel>.bottom>.view {
+    background-color: var(--accentblue);
+    border: 2px solid var(--pink);
+    border-radius: 2vw;
+    height: 50%;
 }
 
 /* Scrollbar */
