@@ -61,7 +61,7 @@
 	margin-right: 5vw;
 
 	background-color: var(--transparentblue);
-	box-shadow: 0 0 10px 2px black;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 	font-size: 0.9vw;
     border-radius: 3%;
     padding: 0.5vw;
@@ -76,20 +76,41 @@
 }
 
 .itemPanel>.bottom {
+    margin: .25vw;
     margin-top: auto;
     font-weight: bold;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items:end;
+    align-items: center;
+    height: 15%;
 }
 
 .itemPanel>.bottom>.view {
-    background-color: var(--accentblue);
+    background-color: #ff9bf2;
     border: 2px solid var(--pink);
     border-radius: 2vw;
-    height: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    box-shadow: 1px 1px 2px black;
+    text-decoration: none;
+}
+
+.itemPanel>.bottom>.view:hover {
+    transform: scale(1.025);
+}
+
+.bottom>.view>.text {
+    padding: 0 12px 0 12px;
+    color: white;
+    font-size: 0.75vw;
+}
+
+.bottom>* {
+    margin: 0;
 }
 
 /* Scrollbar */

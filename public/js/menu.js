@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="ingredients">${ingredients}</p>
                     <div class="bottom">
                         <p class="price">${typeof store.menu[item].Price == "object" ? 'From $' + Object.values(store.menu[item].Price)[0] : "$" + JSON.stringify(store.menu[item].Price)}</p>
-                        <button class="view">View Item</button>
+                        <a class="view" href="/menuItem/${item}"><p class="text">View Item</p></a>
                     </div>
                 `
                 storeItemPanelContainer.appendChild(itemPanel);

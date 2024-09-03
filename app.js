@@ -80,10 +80,12 @@ const indexRouter = require("./routes/index");
 const loginRouter = require("./routes/login");
 const registerRouter = require("./routes/register");
 const menuRouter = require("./routes/menu");
+const menuItemRouter = require("./routes/menuItem");
 app.use("/", indexRouter);
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/menu", menuRouter);
+app.use("/menuItem", menuItemRouter);
 
 // Start the server
 const PORT = process.env.PORT || 3000;
