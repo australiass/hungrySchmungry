@@ -72,7 +72,25 @@ app.post("/login", (req, res) => {
 app.get("/api/menudata", (req, res) => {
     var menuData = path.join(__dirname, "menuData.json");
     var menuData = fs.readFileSync(menuData, 'utf8');
+    console.log("upload original menu data to api");
     res.json(menuData)
+})
+
+app.get("/api/menudata/:store/:item", (req, res) => {
+    const store = decodeURIComponent(req.params.store);
+    const item = decodeURIComponent(req.params.item);
+    console.log("Fetching", item, "from", store);
+    var menuData = path.join(__dirname, "menuData.json");
+    var menuData = fs.readFileSync(menuData, 'utf8');
+    var menuItem = menuData[store] ? menuItems[store][item] : null;
+    console.log("uploading individual item data to api");
+    if (menuItem) {
+        console.log("success");
+        res.json(menuItem);
+    } else {
+        res.status(404).send("Item not found.");
+        console.log("fail");
+    }
 })
 
 // Define routes
