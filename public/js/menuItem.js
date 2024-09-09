@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Display/remove the edit dropdown container on clicking the edit button
         document.getElementById("editButton").addEventListener("click", () => {
             let editDropdown = document.getElementById("dropdownContent");
-            (editDropdown.style.display == "none") ? editDropdown.style.display = "flex" : editDropdown.style.display = "none";
+						console.log(editDropdown.style.display);
+            (editDropdown.style.display != "flex") ? editDropdown.style.display = "flex" : editDropdown.style.display = "none";
         })
 
         document.getElementById("updateChanges").addEventListener("click", () => {
