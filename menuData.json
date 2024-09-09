@@ -23,9 +23,9 @@
                 "Flavours": ["Coke", "Fanta", "Sprite"],
                 "Types": ["Sizes", "Flavours"]
             },
-            "BBQsad Cheeseburger": {
-                "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
-                "Price": 5,
+            "Whopper": {
+                "Ingredients": ["Top Bun", "Onion", "Tomato", "Beef Patty", "Lettuce", "Bottom Bun"],
+                "Price": 6,
                 "Types": ["Single"]
             },
             "Chickedsan Burger": {

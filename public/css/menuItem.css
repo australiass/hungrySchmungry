@@ -1,0 +1,26 @@
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80vw;
+    height: 86vh;
+    background-color: var(--transparentblue);
+    border-radius: 1vw;
+    padding: 2vh 1.5vw;
+    margin-top: 2.5vh;
+}
+
+#mainContainer>* {
+    border: 1px solid red;
+}
+
+#imgContainer {
+    max-width: 40vw;
+    display: flex;
+    align-items: center;
+}
+
+#img {
+    max-width: 100%;
+    height: auto;
+}

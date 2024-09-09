@@ -77,19 +77,23 @@ app.get("/api/menudata", (req, res) => {
 })
 
 app.get("/api/menudata/:store/:item", (req, res) => {
+    console.log("what the fuck cunt");
     const store = decodeURIComponent(req.params.store);
     const item = decodeURIComponent(req.params.item);
     console.log("Fetching", item, "from", store);
     var menuData = path.join(__dirname, "menuData.json");
-    var menuData = fs.readFileSync(menuData, 'utf8');
-    var menuItem = menuData[store] ? menuItems[store][item] : null;
-    console.log("uploading individual item data to api");
-    if (menuItem) {
+    menuData = fs.readFileSync(menuData, 'utf8');
+    menuData = JSON.parse(menuData);
+
+    storeData = menuData.find(entry => entry.store === store);
+    const menuItemData = storeData.menu[item];
+    
+    if (menuItemData) {
         console.log("success");
-        res.json(menuItem);
+        res.json(menuItemData);
     } else {
         res.status(404).send("Item not found.");
-        console.log("fail");
+        console.log("Item not found");
     }
 })
 
