@@ -2,7 +2,8 @@
 
 :root {
     font-family: "Play", sans-serif;
-    --pink: #FF77EC;
+    --pink: #ff77ec;
+    --transparentpink: #ff77ed77;
     --blue: #5371FF;
     --transparentblue: #758af0;
     --accentblue: #d9dfff;
