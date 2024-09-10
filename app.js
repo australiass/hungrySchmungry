@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const fs = require("fs");
+const cookieParser = require("cookie-parser");
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
@@ -13,6 +14,8 @@ app.set("views", path.join(__dirname, "views"));
 // Middleware to parse JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(cookieParser());
 
 // Helper functions relating to the database
 const usersFilePath = path.join(__dirname, "users.json");
@@ -65,6 +68,7 @@ app.post("/login", (req, res) => {
         return res.status(400).json({ message: 'Invalid email or password' });
     }
 
+    res.cookie("userEmail", email, { maxAge: 180 * 60 * 1000 });
     res.status(200).json({ message: "Login successful" });
 })
 
