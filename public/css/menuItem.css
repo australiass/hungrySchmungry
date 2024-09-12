@@ -133,3 +133,20 @@
     filter: contrast(90%);
     cursor: pointer;
 }
+
+@keyframes cartPump {
+	0% {
+		transform: scale(1);
+		color: var(--pink);
+	} 50% {
+		transform: scale(1.25);
+		color: var(--pink);
+	} 100% {
+		transform: scale(1);
+		color: white;
+	}
+}
+
+.cartPumpActive {
+	animation: .4s cartPump linear;
+}

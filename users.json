@@ -76,6 +76,638 @@
       {
         "Chips": true,
         "Salt": true
+      },
+      {
+        "Top Bun": true,
+        "Ketchup": true,
+        "Mustard": true,
+        "Cheese": true,
+        "Beef Patty": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": false,
+        "Ketchup": false,
+        "Mustard": true,
+        "Cheese": true,
+        "Beef Patty": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Ketchup": true,
+        "Mustard": true,
+        "Cheese": true,
+        "Beef Patty": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Ketchup": true,
+        "Mustard": true,
+        "Cheese": true,
+        "Beef Patty": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
       }
     ]
   },

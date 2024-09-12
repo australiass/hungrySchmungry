@@ -20,14 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("title").textContent = item;
 
             // display the ingredients of the item
-            document.getElementById("ingredients").textContent = data.Ingredients;
+            document.getElementById("ingredients").textContent = (data.Ingredients).toString().replaceAll(",", ", ");
+
+			// display the price of the item
+			document.getElementById("price").textContent = `$${data.Price}`;
 
             // loop through ingredients, create a dropdown item for each of them
             let dropdown = document.getElementById("dropdownContent");
 
             let ingredientData = {};
 
-            (data.Ingredients).forEach(ingredient => {
+			ingredients = data.Ingredients;
+
+            ingredients.forEach(ingredient => {
                 var label = document.createElement("label");
                 label.innerHTML = `
                 <input type="checkbox" value="${ingredient}" checked> ${ingredient}
@@ -71,7 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     body: JSON.stringify(data)
                 })
                 .then(response => {
-                    console.log("Handle response");
+					var cart = document.getElementById("cartIcon");
+					cart.classList.remove("cartPumpActive");
+					void cart.offsetWidth;
+					cart.classList.add("cartPumpActive");
                     return response.json();
                 })
                 .then(data => console.log("Response:", data))

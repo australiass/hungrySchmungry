@@ -4,39 +4,34 @@
         "menu": {
             "BBQ Cheeseburger": {
                 "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
+				"adjustableIngredients": ["Ketchup", "Mustard", "Cheese"],
                 "Price": 5,
-                "Types": ["Single"]
+                "Types": ["Regular"]
             },
             "Chicken Burger": {
                 "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
+				"adjustableIngredients": ["Mayonnaise", "Lettuce"],
                 "Price": 6,
-                "Types": ["Single"]
+                "Types": ["Regular"]
             },
             "Chips": {
                 "Ingredients": ["Chips", "Salt"],
+				"adjustableIngredients": ["No Salt", "Extra Salt"],
                 "Price": {"s": 2.75, "m": 3.50, "l": 4},
                 "Types": ["Sizes"]
             },
             "Drinks": {
-                "Ingredients": "Ice",
+                "Ingredients": ["%flavour%", "Ice"],
+				"adjustableIngredients": ["No Ice"],
                 "Price": {"s": 3, "m": 3.75, "l": 4.20},
                 "Flavours": ["Coke", "Fanta", "Sprite"],
                 "Types": ["Sizes", "Flavours"]
             },
             "Whopper": {
-                "Ingredients": ["Top Bun", "Onion", "Tomato", "Beef Patty", "Lettuce", "Bottom Bun"],
+                "Ingredients": ["Top Bun", "Mayonnaise", "Lettuce", "Tomato", "Onion", "Pickles", "Ketchup", "Bottom Bun"],
+				"adjustableIngredients": ["No Mayonnaise", "No Lettuce", "No Tomato", "No Onion", "No Pickles", "No Ketchup"],
                 "Price": 6,
-                "Types": ["Single"]
-            },
-            "Chickedsan Burger": {
-                "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
-                "Price": 6,
-                "Types": ["Single"]
-            },
-            "Chidsaps": {
-                "Ingredients": ["Chips", "Salt"],
-                "Price": {"s": 2.75, "m": 3.50, "l": 4},
-                "Types": ["Sizes"]
+                "Types": ["Regular"]
             }
         }
     },
