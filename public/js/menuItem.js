@@ -64,9 +64,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Handle adding to cart
             document.getElementById("addToCart").addEventListener("click", () => {
-                
+                console.log("Clicked button");
+                fetch("/addItemToCart", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    console.log("Handle response");
+                    return response.json();
+                })
+                .then(data => console.log("Response:", data))
+                .catch(error => console.error("Error:", error));
             })
 
         })
-        .catch(error => console.error("Error fetching menu item:", error));
+        .catch(error => console.error("Error adding to cart", error));
 })

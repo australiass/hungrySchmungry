@@ -7,7 +7,77 @@
   {
     "name": "Oscar",
     "email": "oscarmcgann0708@gmail.com",
-    "password": "PasswordTest"
+    "password": "PasswordTest",
+    "cart": [
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": true
+      },
+      {
+        "Top Bun": false,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": true,
+        "Bottom Bun": false
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      },
+      {
+        "Chips": true,
+        "Salt": true
+      }
+    ]
   },
   {
     "name": "Oscar",
@@ -33,5 +103,20 @@
     "name": "BigDaddySchmacks",
     "email": "oscar.cusick@gmail.com",
     "password": "CumAnus"
+  },
+  {
+    "name": "Tim",
+    "email": "harstujohn@gmail.com",
+    "password": "CUMBLASTER",
+    "cart": [
+      {
+        "Top Bun": true,
+        "Onion": true,
+        "Tomato": true,
+        "Beef Patty": true,
+        "Lettuce": false,
+        "Bottom Bun": true
+      }
+    ]
   }
 ]

@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else if (window.location.href.includes("/login")) {
             data = {email, password};
-            console.log("checking");
             fetch("/login", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},

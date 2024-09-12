@@ -19,7 +19,7 @@ app.use(cookieParser());
 
 // Setting up file paths
 const usersFilePath = path.join(__dirname, "users.json");
-const readUsers = require("../utils/readUsers");
+const readUsers = require("./utils/readUsers");
 
 // Function to write users to the JSON file
 const writeUsers = (users) => {
@@ -31,8 +31,6 @@ const writeUsers = (users) => {
 };
 
 // Function to get a specific user
-
-
 
 // Register endpoint
 app.post('/register', (req, res) => {
@@ -46,7 +44,7 @@ app.post('/register', (req, res) => {
     }
 
     // Add new user to database
-    users.push({ name, email, password });
+    users.push({ name, email, password, cart: [] });
     writeUsers(users);
     res.status(200).json({ message: 'Registration successful' });
 });
@@ -61,16 +59,37 @@ app.post("/login", (req, res) => {
     if (!user) {
         return res.status(400).json({ message: 'Invalid email or password' });
     }
-
     res.cookie("userEmail", email, { maxAge: 10 * 60 * 1000 });
     res.status(200).json({ message: "Login successful" });
     console.log(`User ${email} logged in successfully.`)
 })
 
+// Logout
 app.post("/logout", (req, res) => {
     console.log(`Logging out ${req.cookies.userEmail}.`);
     res.cookie("userEmail", "", { maxAge: 0 });
-    res.send("Logged out");
+    res.status(200).json({ message: "Logged out" });
+})
+
+// Add item to cart
+app.post("/addItemToCart", (req, res) => {
+    console.log("Adding item to cart", req.body);
+    userEmail = req.cookies.userEmail;
+
+    const users = readUsers();
+
+    const user = users.find(user => user.email === userEmail);
+    const userUpdated = user;
+    if (user) {
+        userUpdated["cart"].push(req.body.IngredientData);
+    } else {
+        console.log("shitter");
+    }
+
+    // Add new user to database
+    users.user = userUpdated;
+    writeUsers(users);
+    res.status(200).json({ message: "Added!" });
 })
 
 // Upload menu data to api

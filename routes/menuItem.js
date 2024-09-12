@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const auth = require("../../utils/authenticateUser");
+const auth = require("../utils/authenticateUser");
 
 router.get('/:store/:id', auth, (req, res) => {
     const store = decodeURIComponent(req.params.store);
