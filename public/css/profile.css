@@ -1,0 +1,36 @@
+#mainContainer {
+    width: 90vw;
+    height: 80vh;
+    margin: 5.5vh auto;
+    border: 2px solid black;
+    box-shadow: 0 4px 10px 1px black;
+    padding: 2vh;
+    background-color: var(--transparentblue);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#mainContainer>* {
+    border: 0px solid green;
+}
+
+#logout {
+    border: 3px solid black;
+    background-color: rgb(255, 73, 73);
+    color: white;
+    font-size: 1vw;
+    width: 8vw;
+    height: 2vw;
+    border-radius: .7vw;
+    font-weight: bold;
+    letter-spacing: 0.025vw;
+    margin: auto auto 1vh auto
+}
+
+#logout:hover {
+    transform: scale(1.03);
+    border-radius: .6vw;
+    cursor: pointer;
+}

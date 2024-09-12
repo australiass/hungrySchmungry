@@ -17,19 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
-// Helper functions relating to the database
+// Setting up file paths
 const usersFilePath = path.join(__dirname, "users.json");
-
-// Function to read users from the JSON file
-const readUsers = () => {
-    try {
-        const data = fs.readFileSync(usersFilePath, 'utf8');
-        return data ? JSON.parse(data) : [];
-    } catch (error) {
-        console.error('Error reading users file:', error);
-        return [];
-    }
-};
+const readUsers = require("../utils/readUsers");
 
 // Function to write users to the JSON file
 const writeUsers = (users) => {
@@ -39,6 +29,10 @@ const writeUsers = (users) => {
         console.error('Error writing users file:', error);
     }
 };
+
+// Function to get a specific user
+
+
 
 // Register endpoint
 app.post('/register', (req, res) => {
@@ -68,20 +62,26 @@ app.post("/login", (req, res) => {
         return res.status(400).json({ message: 'Invalid email or password' });
     }
 
-    res.cookie("userEmail", email, { maxAge: 180 * 60 * 1000 });
+    res.cookie("userEmail", email, { maxAge: 10 * 60 * 1000 });
     res.status(200).json({ message: "Login successful" });
+    console.log(`User ${email} logged in successfully.`)
+})
+
+app.post("/logout", (req, res) => {
+    console.log(`Logging out ${req.cookies.userEmail}.`);
+    res.cookie("userEmail", "", { maxAge: 0 });
+    res.send("Logged out");
 })
 
 // Upload menu data to api
 app.get("/api/menudata", (req, res) => {
     var menuData = path.join(__dirname, "menuData.json");
     var menuData = fs.readFileSync(menuData, 'utf8');
-    console.log("upload original menu data to api");
+    console.log("Uploaded original menu data to api");
     res.json(menuData)
 })
 
 app.get("/api/menudata/:store/:item", (req, res) => {
-    console.log("what the fuck cunt");
     const store = decodeURIComponent(req.params.store);
     const item = decodeURIComponent(req.params.item);
     console.log("Fetching", item, "from", store);
@@ -107,11 +107,13 @@ const loginRouter = require("./routes/login");
 const registerRouter = require("./routes/register");
 const menuRouter = require("./routes/menu");
 const menuItemRouter = require("./routes/menuItem");
+const profileRouter = require("./routes/profile");
 app.use("/", indexRouter);
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/menu", menuRouter);
 app.use("/menuItem", menuItemRouter);
+app.use("/profile", profileRouter);
 
 // Start the server
 const PORT = process.env.PORT || 3000;

@@ -33,19 +33,20 @@
     display: flex;
     flex-direction: column;
     background-color: var(--accentblue);
-	box-shadow: 1px 1px 6px black;
+    box-shadow: 1px 1px 6px black;
 }
 
 #infoContainer {
-	margin: 0 1vw;
+    margin: 0 1vw;
 }
 
 #title {
-	font-size: 3vw;
+    font-size: 3vw;
+    margin-top: 1.25vh;
 }
 
 #ingredients {
-	font-size: 1.2vw;
+    font-size: 1.2vw;
 }
 
 #addToCart {
@@ -77,7 +78,7 @@
 #editContainer {
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     font-size: 1.1vw;
 }
 
@@ -104,31 +105,31 @@
     border-radius: 1vw;
     width: 10vw;
     font-size: .9vw;
-	height: 3vh;
+    height: 3vh;
 }
 
 #addToCart {
-	width: 100%;
-	margin: 0 auto;
-	padding: 0;
-	margin-top: auto;
-	border-radius: 0 0 1vw 1vw;
-	height: 6vh;
-	border: none;
-	border-top: 1px solid black;
-	background: var(--pink);
-	font-size: 1.5vw;
-	font-weight: bold;
-	color: white;
-	letter-spacing: .1vw;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: auto;
+    border-radius: 0 0 1vw 1vw;
+    height: 6vh;
+    border: none;
+    border-top: 1px solid black;
+    background: var(--pink);
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .1vw;
 }
 
 #addToCart:hover {
-	filter:hue-rotate(15deg);
-	cursor: pointer;
+    filter: hue-rotate(15deg);
+    cursor: pointer;
 }
 
 #updateChanges:hover {
-	filter:contrast(90%);
-	cursor: pointer;
+    filter: contrast(90%);
+    cursor: pointer;
 }
