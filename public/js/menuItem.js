@@ -25,19 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
 			// display the price of the item
 			document.getElementById("price").textContent = `$${data.Price}`;
 
+			//document.getElementById("item").textContent = `Customise the ${item.toLowerCase()} to your liking:`;
+
             // loop through ingredients, create a dropdown item for each of them
-            let dropdown = document.getElementById("dropdownContent");
+            let ingredientsContent = document.getElementById("ingredientsContent");
 
             let ingredientData = {};
 
 			ingredients = data.Ingredients;
 
             ingredients.forEach(ingredient => {
+				var container = document.createElement("div");
                 var label = document.createElement("label");
-                label.innerHTML = `
-                <input type="checkbox" value="${ingredient}" checked> ${ingredient}
-            `;
-                dropdown.appendChild(label);
+				label.textContent = ingredient;
+				label.for = "customCheckbox";
+				var input = document.createElement("input");
+				input.type = "checkbox";
+				input.value = ingredient;
+				input.checked = true;
+				input.id = "customCheckbox";
+				input.classList.add("custom-checkbox");
+                container.appendChild(label);
+				container.appendChild(input);
+				ingredientsContent.appendChild(container);
                 ingredientData[ingredient] = true;
             })
 
@@ -46,25 +56,23 @@ document.addEventListener("DOMContentLoaded", () => {
             let saveChangesButton = document.createElement("button");
             saveChangesButton.textContent = "Save Changes";
             saveChangesButton.id = "updateChanges";
-            dropdown.appendChild(saveChangesButton);
+            ingredientsContent.appendChild(saveChangesButton);
 
             // all event listeners added below
             // had to be within the promise response as its asynchronous and some of the functions are applied to elements generate above
 
             // Display/remove the edit dropdown container on clicking the edit button
-            document.getElementById("editButton").addEventListener("click", () => {
-                let editDropdown = document.getElementById("dropdownContent");
-                console.log(editDropdown.style.display);
-                (editDropdown.style.display != "flex") ? editDropdown.style.display = "flex" : editDropdown.style.display = "none";
-            })
+            document.getElementById('customCheckbox').addEventListener('click', function() {
+    			console.log('Checkbox state:', this.checked);
+			});
 
             // Handle save changes button
             document.getElementById("updateChanges").addEventListener("click", () => {
-                ingredients = document.getElementById("dropdownContent").querySelectorAll("input");
+                ingredients = document.getElementById("ingredientsContent").querySelectorAll("input");
                 ingredients.forEach(ingredient => {
                     data.IngredientData[ingredient.value] = ingredient.checked;
                 })
-                document.getElementById("dropdownContent").style.display = "none";
+                document.getElementById("ingredientsContent").style.display = "none";
             })
 
             // Handle adding to cart
