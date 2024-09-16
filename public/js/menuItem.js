@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("ingredients").textContent = (data.Ingredients).toString().replaceAll(",", ", ");
 
 			// display the price of the item
-			document.getElementById("price").textContent = `$${data.Price}`;
+            console.log(typeof data.Price);
+			document.getElementById("price").textContent = `${typeof data.Price == "object" ? 'From $' + Object.values(data.Price)[0] : "$" + JSON.stringify(data.Price)}`;
 
 			//document.getElementById("item").textContent = `Customise the ${item.toLowerCase()} to your liking:`;
 
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let ingredientData = {};
 
-			ingredients = data.Ingredients;
+			ingredients = data.adjustableIngredients;
 
             ingredients.forEach(ingredient => {
 				var container = document.createElement("div");
@@ -42,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				var input = document.createElement("input");
 				input.type = "checkbox";
 				input.value = ingredient;
-				input.checked = true;
 				input.id = "customCheckbox";
 				input.classList.add("custom-checkbox");
                 container.appendChild(label);
@@ -53,35 +53,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
             data.IngredientData = ingredientData;
 
-            let saveChangesButton = document.createElement("button");
-            saveChangesButton.textContent = "Save Changes";
-            saveChangesButton.id = "updateChanges";
-            ingredientsContent.appendChild(saveChangesButton);
-
             // all event listeners added below
             // had to be within the promise response as its asynchronous and some of the functions are applied to elements generate above
 
-            // Display/remove the edit dropdown container on clicking the edit button
-            document.getElementById('customCheckbox').addEventListener('click', function() {
-    			console.log('Checkbox state:', this.checked);
-			});
-
-            // Handle save changes button
-            document.getElementById("updateChanges").addEventListener("click", () => {
-                ingredients = document.getElementById("ingredientsContent").querySelectorAll("input");
-                ingredients.forEach(ingredient => {
-                    data.IngredientData[ingredient.value] = ingredient.checked;
-                })
-                document.getElementById("ingredientsContent").style.display = "none";
-            })
 
             // Handle adding to cart
             document.getElementById("addToCart").addEventListener("click", () => {
                 console.log("Clicked button");
+
+                ingredients = document.getElementById("ingredientsContent").querySelectorAll("input");
+                ingredients.forEach(ingredient => {
+                    data.IngredientData[ingredient.value] = ingredient.checked;
+                })
+
                 fetch("/addItemToCart", {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify(data)
+                    body: JSON.stringify({ data: data, store: store, item: item })
                 })
                 .then(response => {
 					var cart = document.getElementById("cartIcon");

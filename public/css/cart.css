@@ -1,0 +1,16 @@
+#mainContainer {
+    border: 2px solid black;
+    background-color: var(--transparentblue);
+    width: 90vw;
+    height: 88vh;
+    margin: 2vh auto;
+    padding: 1vh;
+}
+
+.storePanel {
+    border: 1px solid green;
+}
+
+.itemPanelContainer {
+    border: 1px solid red;
+}

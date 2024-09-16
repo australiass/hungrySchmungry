@@ -44,7 +44,7 @@ app.post('/register', (req, res) => {
     }
 
     // Add new user to database
-    users.push({ name, email, password, cart: [] });
+    users.push({ name, email, password, cart: {} });
     writeUsers(users);
     res.status(200).json({ message: 'Registration successful' });
 });
@@ -76,14 +76,25 @@ app.post("/addItemToCart", (req, res) => {
     console.log("Adding item to cart", req.body);
     userEmail = req.cookies.userEmail;
 
+
     const users = readUsers();
 
     const user = users.find(user => user.email === userEmail);
     const userUpdated = user;
     if (user) {
-        userUpdated["cart"].push(req.body.IngredientData);
-    } else {
-        console.log("shitter");
+        let store = req.body.store;
+        let item = req.body.item;
+        console.log(typeof userUpdated, userUpdated);
+        if (!userUpdated.cart[store]) {
+            userUpdated.cart[store] = {};
+            console.log("added store");
+        }
+        if (!userUpdated.cart[store][item]) {
+            userUpdated.cart[store][item] = [];
+            console.log("added item");
+        }
+        console.log(req.body.data.IngredientData);
+        userUpdated.cart[store][item].push(req.body.data.IngredientData);
     }
 
     // Add new user to database
@@ -127,12 +138,14 @@ const registerRouter = require("./routes/register");
 const menuRouter = require("./routes/menu");
 const menuItemRouter = require("./routes/menuItem");
 const profileRouter = require("./routes/profile");
+const cartRouter = require("./routes/cart");
 app.use("/", indexRouter);
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
 app.use("/menu", menuRouter);
 app.use("/menuItem", menuItemRouter);
 app.use("/profile", profileRouter);
+app.use("/cart", cartRouter);
 
 // Start the server
 const PORT = process.env.PORT || 3000;

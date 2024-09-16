@@ -4,13 +4,13 @@
         "menu": {
             "BBQ Cheeseburger": {
                 "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
-				"adjustableIngredients": ["Ketchup", "Mustard", "Cheese"],
+				"adjustableIngredients": ["No Ketchup", "No Mustard", "No Cheese"],
                 "Price": 5,
                 "Types": ["Regular"]
             },
             "Chicken Burger": {
                 "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
-				"adjustableIngredients": ["Mayonnaise", "Lettuce"],
+				"adjustableIngredients": ["No Mayonnaise", "No Lettuce"],
                 "Price": 6,
                 "Types": ["Regular"]
             },
