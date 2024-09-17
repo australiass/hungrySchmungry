@@ -73,7 +73,6 @@ app.post("/logout", (req, res) => {
 
 // Add item to cart
 app.post("/addItemToCart", (req, res) => {
-    console.log("Adding item to cart", req.body);
     userEmail = req.cookies.userEmail;
 
 
@@ -84,24 +83,47 @@ app.post("/addItemToCart", (req, res) => {
     if (user) {
         let store = req.body.store;
         let item = req.body.item;
-        console.log(typeof userUpdated, userUpdated);
         if (!userUpdated.cart[store]) {
             userUpdated.cart[store] = {};
-            console.log("added store");
+            console.log("added", store);
         }
         if (!userUpdated.cart[store][item]) {
             userUpdated.cart[store][item] = [];
-            console.log("added item");
+            console.log("added", item);
         }
-        console.log(req.body.data.IngredientData);
-        userUpdated.cart[store][item].push(req.body.data.IngredientData);
-    }
+        let match = true; // If unchanged, tells code that it matches and we have to add 1 to the amount key
+        let first = true
+        for (let itemVariation in userUpdated.cart[store][item])  { // Loop each store/item: array (int)
+            console.log("Loop ", itemVariation);
+            first = false;
+            var lastVariation = itemVariation;
+            for (let key in req.body.data.IngredientData) { // Loop through each key in request data (key)
+                console.log("   - Key:", key);
+                if (userUpdated.cart[store][item][itemVariation][key] !== req.body.data.IngredientData[key]) {
+                    match = false // Tells code that we need to make a new array for this variation
+                }
+            }
+        }
+        if (match == true && first == true) {
+            match = false;
+        }
+        if (match == true) {
+            console.log("There was a matching variation already existnig");
+            console.log(userUpdated.cart[store][item]);
+            console.log(lastVariation)
+            userUpdated.cart[store][item][lastVariation]["amount"] += 1;
+        } else {
+            console.log("There was no pre existing matching variation");
+            var ingredientData = req.body.data.IngredientData;
+            ingredientData["amount"] = 1;
+            userUpdated.cart[store][item].push(ingredientData);
+        }
 
-    // Add new user to database
+    //Add new user to database
     users.user = userUpdated;
     writeUsers(users);
     res.status(200).json({ message: "Added!" });
-})
+}})
 
 // Upload menu data to api
 app.get("/api/menudata", (req, res) => {

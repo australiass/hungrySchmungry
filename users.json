@@ -10,128 +10,48 @@
     "password": "a",
     "cart": {
       "Hungry Jacks": {
-        "Chicken Burger": [
-          {
-            "No Mayonnaise": false,
-            "No Lettuce": false
-          }
-        ],
         "BBQ Cheeseburger": [
           {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": true
+            "No Ketchup": false,
+            "No Mustard": false,
+            "No Cheese": false,
+            "amount": 6
           },
           {
             "No Ketchup": false,
             "No Mustard": false,
-            "No Cheese": false
+            "No Cheese": true,
+            "amount": 1
           },
           {
             "No Ketchup": false,
             "No Mustard": false,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
-          },
-          {
-            "No Ketchup": true,
-            "No Mustard": true,
-            "No Cheese": false
+            "No Cheese": true,
+            "amount": 1
           },
           {
             "No Ketchup": false,
             "No Mustard": false,
-            "No Cheese": false
+            "No Cheese": true,
+            "amount": 1
           },
           {
             "No Ketchup": false,
             "No Mustard": false,
-            "No Cheese": false
+            "No Cheese": false,
+            "amount": 1
           },
           {
             "No Ketchup": false,
             "No Mustard": false,
-            "No Cheese": false
-          }
-        ],
-        "Chips": [
-          {
-            "No Salt": true,
-            "Extra Salt": true
+            "No Cheese": false,
+            "amount": 1
           },
           {
-            "No Salt": true,
-            "Extra Salt": true
-          },
-          {
-            "No Salt": true,
-            "Extra Salt": true
-          },
-          {
-            "No Salt": false,
-            "Extra Salt": false
-          },
-          {
-            "No Salt": false,
-            "Extra Salt": false
-          },
-          {
-            "No Salt": false,
-            "Extra Salt": true
+            "No Ketchup": false,
+            "No Mustard": false,
+            "No Cheese": false,
+            "amount": 1
           }
         ]
       }

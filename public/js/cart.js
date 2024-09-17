@@ -28,10 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(item);
             var itemPanel = document.createElement("div");
             itemPanel.className = "itemPanel";
-            // Create the html 
-            itemPanel.innerHTML = `
-                    <div class="item">${item}</div>
-                `
+            var ingredientPanel = document.createElement("div");
+            ingredientPanel.className = "ingredientPanel";
+            itemPanel.appendChild(ingredientPanel);
+            for (let ingredient in data['cart'][store][item]) {
+                var ingredientt = document.createElement("div");
+                ingredientt.className = "ingredient";
+                ingredientt.textContent = ingredient;
+                ingredientPanel.appendChild(ingredientt);
+            }
             storeItemPanelContainer.appendChild(itemPanel);
         }
         storePanel.appendChild(storeItemPanelContainer);

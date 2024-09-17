@@ -36,80 +36,74 @@
         }
     },
     {
-        "store": "McDonalds",
+        "store": "Sushi Haven",
         "menu": {
-            "Big Mac": {
-                "Ingredients": ["Top Bun", "Special Sauce", "Lettuce", "Cheese", "Beef Patty", "Bottom Bun"],
-                "Price": 6,
-                "Types": ["Single", "Double"]
-            },
-            "McChicken": {
-                "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
+            "BBQ Cheeseburger": {
+                "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
+				"adjustableIngredients": ["No Ketchup", "No Mustard", "No Cheese"],
                 "Price": 5,
-                "Types": ["Single"]
+                "Types": ["Regular"]
             },
-            "Fries": {
-                "Ingredients": ["Potatoes", "Salt"],
-                "Price": {"s": 2.50, "m": 3.00, "l": 3.50},
-                "Types": ["Sizes"]
+            "Chicken Burger": {
+                "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
+				"adjustableIngredients": ["No Mayonnaise", "No Lettuce"],
+                "Price": 6,
+                "Types": ["Regular"]
             },
-            "Soft Drinks": {
-                "Ingredients": "Ice",
-                "Price": {"s": 2.00, "m": 2.50, "l": 3.00},
-                "Flavours": ["Coke", "Sprite", "Fanta"],
-                "Types": ["Sizes", "Flavours"]
-            }
-        }
-    },
-    {
-        "store": "Burger King",
-        "menu": {
-            "Whopper": {
-                "Ingredients": ["Top Bun", "Mayonnaise", "Lettuce", "Tomato", "Pickles", "Onions", "Beef Patty", "Bottom Bun"],
-                "Price": 7,
-                "Types": ["Single", "Double"]
-            },
-            "Chicken Nuggets": {
-                "Ingredients": ["Chicken", "Breading", "Seasoning"],
-                "Price": {"4pc": 2.50, "6pc": 3.50, "10pc": 5},
-                "Types": ["Pieces"]
-            },
-            "Onion Rings": {
-                "Ingredients": ["Onions", "Breading", "Seasoning"],
+            "Chips": {
+                "Ingredients": ["Chips", "Salt"],
+				"adjustableIngredients": ["No Salt", "Extra Salt"],
                 "Price": {"s": 2.75, "m": 3.50, "l": 4},
                 "Types": ["Sizes"]
             },
-            "Milkshakes": {
-                "Ingredients": "Milk, Ice Cream",
-                "Price": {"s": 3.50, "m": 4.25, "l": 5},
-                "Flavours": ["Vanilla", "Chocolate", "Strawberry"],
+            "Drinks": {
+                "Ingredients": ["%flavour%", "Ice"],
+				"adjustableIngredients": ["No Ice"],
+                "Price": {"s": 3, "m": 3.75, "l": 4.20},
+                "Flavours": ["Coke", "Fanta", "Sprite"],
                 "Types": ["Sizes", "Flavours"]
+            },
+            "Whopper": {
+                "Ingredients": ["Top Bun", "Mayonnaise", "Lettuce", "Tomato", "Onion", "Pickles", "Ketchup", "Bottom Bun"],
+				"adjustableIngredients": ["No Mayonnaise", "No Lettuce", "No Tomato", "No Onion", "No Pickles", "No Ketchup"],
+                "Price": 6,
+                "Types": ["Regular"]
             }
         }
     },
     {
-        "store": "Taco Bell",
+        "store": "McDonalds",
         "menu": {
-            "Crunchy Taco": {
-                "Ingredients": ["Taco Shell", "Beef", "Lettuce", "Cheese"],
-                "Price": 2,
-                "Types": ["Single"]
-            },
-            "Burrito Supreme": {
-                "Ingredients": ["Tortilla", "Beef", "Beans", "Lettuce", "Tomato", "Cheese", "Sour Cream"],
+            "BBQ Cheeseburger": {
+                "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
+				"adjustableIngredients": ["No Ketchup", "No Mustard", "No Cheese"],
                 "Price": 5,
-                "Types": ["Single"]
+                "Types": ["Regular"]
             },
-            "Nachos": {
-                "Ingredients": ["Tortilla Chips", "Cheese Sauce", "Jalapenos"],
-                "Price": {"s": 2.50, "m": 3.50, "l": 4.50},
+            "Chicken Burger": {
+                "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
+				"adjustableIngredients": ["No Mayonnaise", "No Lettuce"],
+                "Price": 6,
+                "Types": ["Regular"]
+            },
+            "Chips": {
+                "Ingredients": ["Chips", "Salt"],
+				"adjustableIngredients": ["No Salt", "Extra Salt"],
+                "Price": {"s": 2.75, "m": 3.50, "l": 4},
                 "Types": ["Sizes"]
             },
-            "Baja Blast": {
-                "Ingredients": "Ice",
-                "Price": {"s": 2.00, "m": 2.75, "l": 3.50},
-                "Flavours": ["Original"],
+            "Drinks": {
+                "Ingredients": ["%flavour%", "Ice"],
+				"adjustableIngredients": ["No Ice"],
+                "Price": {"s": 3, "m": 3.75, "l": 4.20},
+                "Flavours": ["Coke", "Fanta", "Sprite"],
                 "Types": ["Sizes", "Flavours"]
+            },
+            "Whopper": {
+                "Ingredients": ["Top Bun", "Mayonnaise", "Lettuce", "Tomato", "Onion", "Pickles", "Ketchup", "Bottom Bun"],
+				"adjustableIngredients": ["No Mayonnaise", "No Lettuce", "No Tomato", "No Onion", "No Pickles", "No Ketchup"],
+                "Price": 6,
+                "Types": ["Regular"]
             }
         }
     }
