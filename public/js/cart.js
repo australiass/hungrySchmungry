@@ -16,9 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const userData = cartDataContainer.textContent;
     cartDataContainer.textContent = "";
     let data = JSON.parse(userData);
-    console.log(data);
+    let totalCost = 0;
     for (let store in data['cart']) {
-        console.log(store);
         // Create a new element which will hold the menu items of each store, add class/ID to it for css manipulation
         var storePanel = document.createElement("div");
         storePanel.className = "storePanel";
@@ -65,7 +64,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 variationDivLeft.appendChild(itemLabel);
                 var variationDivRight = document.createElement("div");
                 variationDivRight.className = "variationDivRight";
-                variationDivRight.innerHTML = `<div class="price">$${parseFloat(data['cart'][store][item][variation]["amount"] * storeMenuData[item].Price).toFixed(2)}</div><i class="fa-solid fa-x remove"></i>`;
+                variationDivRight.id = store;
+                totalCost+=data['cart'][store][item][variation]["amount"] * storeMenuData[item].Price;
+                variationDivRight.innerHTML = `<div class="price">$${parseFloat(data['cart'][store][item][variation]["amount"] * storeMenuData[item].Price).toFixed(2)}</div><i class="fa-solid fa-x remove" id="${item}"></i>`;
 
                 //variationDiv.textContent = JSON.stringify(data['cart'][store][item][variation]);
                 for (let ingredient in data['cart'][store][item][variation]) { // For each ingredient in the variation
@@ -78,6 +79,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 variationDiv.appendChild(variationDivLeft);
                 variationDiv.appendChild(variationDivRight);
                 ingredientPanel.appendChild(variationDiv);
+                var hiddenJSON = document.createElement("div");
+                hiddenJSON.style.display = "none";
+                hiddenJSON.id = "json";
+                hiddenJSON.textContent = JSON.stringify(data['cart'][store][item][variation]);
+                variationDivRight.appendChild(hiddenJSON);
             }
             itemPanel.appendChild(ingredientPanel);
             storeItemPanelContainer.appendChild(itemPanel);
@@ -88,7 +94,25 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.querySelectorAll(".remove").forEach(button => {
         button.addEventListener("click", () => {
-            console.log(button.parentElement.parentElement);
+            let element = button.parentElement;
+
+            let item = button.id;
+            let store = button.parentElement.id;
+            let variation = JSON.parse(element.querySelector("#json").textContent);
+
+            fetch("/removeItemFromCart", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({ variation: variation, store: store, item: item })
+            })
+            .then(response => {
+                if (response.status == 200) {
+                    window.location.href = "/cart";
+                }
+                return response.json();
+            })
+            .then(data => console.log("Response:", data))
+            .catch(error => console.error("Error:", error));
         })
     })
 })

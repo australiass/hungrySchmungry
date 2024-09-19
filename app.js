@@ -134,6 +134,36 @@ app.post("/addItemToCart", (req, res) => {
     res.status(200).json({ message: "Added!" });
 }})
 
+// Remove item from cart
+app.post("/removeItemFromCart", (req, res) => {
+    userEmail = req.cookies.userEmail;
+    const users = readUsers();
+
+    const user = users.find(user => user.email === userEmail);
+
+    let item = req.body.item;
+    let store = req.body.store;
+    let variation = req.body.variation;
+
+    if (user) {
+        user['cart'][store][item] = user['cart'][store][item].filter((filteredItem) => {
+            return JSON.stringify(variation) !== JSON.stringify(filteredItem);
+        })
+
+        if (Object.keys(user['cart'][store][item]).length == 0) {
+            console.log("removing item");
+            delete user['cart'][store][item];
+        }
+        if (Object.keys(user['cart'][store]).length == 0) {
+            console.log("removing store");
+            delete user['cart'][store];
+        }
+        
+        writeUsers(users);
+        res.status(200).json({ message: "Removed item" });
+    }
+})
+
 // Upload menu data to api
 app.get("/api/menudata", (req, res) => {
     var menuData = path.join(__dirname, "menuData.json");
@@ -170,6 +200,7 @@ const menuRouter = require("./routes/menu");
 const menuItemRouter = require("./routes/menuItem");
 const profileRouter = require("./routes/profile");
 const cartRouter = require("./routes/cart");
+const { kMaxLength } = require("buffer");
 app.use("/", indexRouter);
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);

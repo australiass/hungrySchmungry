@@ -45,7 +45,6 @@
     border-radius: 0.5vw;
     padding: 0.25vw;
     background-color: var(--accentblue);
-    border: 1px solid red;
     box-sizing: border-box;
 }
 
@@ -64,6 +63,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: 1px 1px 7px black;
 }
 
 .variationLabel {
@@ -74,21 +74,20 @@
     background-color: var(--pink);
     padding: 0.2vw;
     border-radius: 0.4vw;
-    border: 1px solid black;
+    box-shadow: 2px 2px 5px black;
 }
 
 .remove {
-    display: inline-block;
-    vertical-align: middle;
-    border: 1px solid var(--pink);
     padding: 3px;
     text-align: center;
     margin: 0.2vw auto;
     border-radius: 0.2vw;
     background-color: var(--accentblue);
     color: black;
-    width: 1vw;
-    margin-bottom: auto;
+    width: 0.5vw;
+    box-shadow: 2px 2px 5px black;
+    font-size: 0.5vw;
+    margin-left: 0.75vw;
 }
 
 .remove:hover {
@@ -103,5 +102,29 @@
 .variationDivRight {
     margin-left: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+form#cardNumber {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3vw;
+}
+
+form#cardNumber>* {
+    width: 3.5vw;
+    letter-spacing: auto;
+}
+
+input#csv {
+    width: 2.5vw;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
