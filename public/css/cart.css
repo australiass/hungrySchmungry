@@ -5,21 +5,103 @@
     height: 88vh;
     margin: 2vh auto;
     padding: 1vh;
+    display: flex;
+    flex-direction: row;
+    border-radius: 1vw;
 }
 
-.storePanel {
+
+#mainContainer>* {
+    margin: 0 auto;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+#cartDataContainer {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18vw, 1fr));
+    grid-template-rows: repeat(3, min-content);
+    gap: 1vw; /* Adjust as needed */
+}
+
+#checkoutContainer {
+    background-color: var(--accentblue);
+    width: 25%;
+    border: 1px solid black;
 }
 
 .storeTitle {
     font-size: 1.8vw;
     font-weight: bold;
+    text-align: center;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid black;
+    margin-bottom: 2vh;
 }
 
-.itemPanelContainer {
-    display: flex;
-    flex-direction: column;
+.storePanel {
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    padding: 0.25vw;
+    background-color: var(--accentblue);
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 .itemPanel {
     margin: 1vh 0;
+}
+
+.variationContainer {
+    margin: 0 auto;
+    margin-bottom: 0.8vh;
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    background-color: var(--transparentpink);
+    padding: 0.5vw;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.variationLabel {
+    font-size: 0.95vw;
+}
+
+.price {
+    background-color: var(--pink);
+    padding: 0.2vw;
+    border-radius: 0.4vw;
+    border: 1px solid black;
+}
+
+.remove {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid var(--pink);
+    padding: 3px;
+    text-align: center;
+    margin: 0.2vw auto;
+    border-radius: 0.2vw;
+    background-color: var(--accentblue);
+    color: black;
+    width: 1vw;
+    margin-bottom: auto;
+}
+
+.remove:hover {
+    background-color: var(--transparentblue);
+    cursor: pointer;
+}
+
+.remove:active {
+    background-color: var(--blue);
+}
+
+.variationDivRight {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
 }

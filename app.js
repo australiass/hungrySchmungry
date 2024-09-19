@@ -59,7 +59,7 @@ app.post("/login", (req, res) => {
     if (!user) {
         return res.status(400).json({ message: 'Invalid email or password' });
     }
-    res.cookie("userEmail", email, { maxAge: 10 * 60 * 1000 });
+    res.cookie("userEmail", email, { maxAge: 180 * 60 * 1000 });
     res.status(200).json({ message: "Login successful" });
     console.log(`User ${email} logged in successfully.`)
 })
@@ -91,29 +91,38 @@ app.post("/addItemToCart", (req, res) => {
             userUpdated.cart[store][item] = [];
             console.log("added", item);
         }
-        let match = true; // If unchanged, tells code that it matches and we have to add 1 to the amount key
+        let match;// If unchanged, tells code that it matches and we have to add 1 to the amount key
         let first = true
         for (let itemVariation in userUpdated.cart[store][item])  { // Loop each store/item: array (int)
             console.log("Loop ", itemVariation);
             first = false;
             var lastVariation = itemVariation;
+            match = false;
             for (let key in req.body.data.IngredientData) { // Loop through each key in request data (key)
-                console.log("   - Key:", key);
-                if (userUpdated.cart[store][item][itemVariation][key] !== req.body.data.IngredientData[key]) {
-                    match = false // Tells code that we need to make a new array for this variation
+                console.log("   - Key:", key, "->", req.body.data.IngredientData[key], " vs ", userUpdated.cart[store][item][itemVariation][key]);
+                if (userUpdated.cart[store][item][itemVariation][key] === req.body.data.IngredientData[key]) {
+                    match = true // Tells code that we need to make a new array for this variation
+                    console.log("Match above");
+                } else {
+                    match = false;
+                    console.log("Individual non-match above");
+                    break;
                 }
             }
+            if (match) {
+                console.log("Breaking outer loop")
+                break;
+            }
         }
-        if (match == true && first == true) {
-            match = false;
+        if (match == false && first == true) {
+            console.log("This is the first time this item is being added to the cart");
+            match = true;
         }
         if (match == true) {
-            console.log("There was a matching variation already existnig");
-            console.log(userUpdated.cart[store][item]);
-            console.log(lastVariation)
+            console.log("Match found");
             userUpdated.cart[store][item][lastVariation]["amount"] += 1;
         } else {
-            console.log("There was no pre existing matching variation");
+            console.log("Non-match found");
             var ingredientData = req.body.data.IngredientData;
             ingredientData["amount"] = 1;
             userUpdated.cart[store][item].push(ingredientData);

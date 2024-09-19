@@ -5,106 +5,323 @@
             "BBQ Cheeseburger": {
                 "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
 				"adjustableIngredients": ["No Ketchup", "No Mustard", "No Cheese"],
-                "Price": 5,
-                "Types": ["Regular"]
+                "Price": 5
             },
             "Chicken Burger": {
                 "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
 				"adjustableIngredients": ["No Mayonnaise", "No Lettuce"],
-                "Price": 6,
-                "Types": ["Regular"]
+                "Price": 6
             },
             "Chips": {
                 "Ingredients": ["Chips", "Salt"],
 				"adjustableIngredients": ["No Salt", "Extra Salt"],
-                "Price": {"s": 2.75, "m": 3.50, "l": 4},
-                "Types": ["Sizes"]
+                "Price": 3
             },
-            "Drinks": {
-                "Ingredients": ["%flavour%", "Ice"],
+            "Coca Cola 375ml": {
+                "Ingredients": ["Coca Cola", "Ice"],
 				"adjustableIngredients": ["No Ice"],
-                "Price": {"s": 3, "m": 3.75, "l": 4.20},
-                "Flavours": ["Coke", "Fanta", "Sprite"],
-                "Types": ["Sizes", "Flavours"]
+                "Price": 4
             },
             "Whopper": {
                 "Ingredients": ["Top Bun", "Mayonnaise", "Lettuce", "Tomato", "Onion", "Pickles", "Ketchup", "Bottom Bun"],
 				"adjustableIngredients": ["No Mayonnaise", "No Lettuce", "No Tomato", "No Onion", "No Pickles", "No Ketchup"],
-                "Price": 6,
-                "Types": ["Regular"]
+                "Price": 6
             }
         }
     },
     {
-        "store": "Sushi Haven",
+        "store": "Grill'd",
         "menu": {
-            "BBQ Cheeseburger": {
-                "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
-				"adjustableIngredients": ["No Ketchup", "No Mustard", "No Cheese"],
-                "Price": 5,
-                "Types": ["Regular"]
+            "Classic Burger": {
+                "Ingredients": ["Top Bun", "Lettuce", "Tomato", "Beef Patty", "Cheese", "Pickles", "Bottom Bun"],
+                "adjustableIngredients": ["No Lettuce", "No Tomato", "No Cheese", "No Pickles"],
+                "Price": 10
             },
-            "Chicken Burger": {
-                "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
-				"adjustableIngredients": ["No Mayonnaise", "No Lettuce"],
-                "Price": 6,
-                "Types": ["Regular"]
+            "Chicken Caesar Burger": {
+                "Ingredients": ["Top Bun", "Grilled Chicken", "Lettuce", "Caesar Dressing", "Parmesan Cheese", "Bottom Bun"],
+                "adjustableIngredients": ["No Caesar Dressing", "No Parmesan Cheese"],
+                "Price": 12
             },
-            "Chips": {
-                "Ingredients": ["Chips", "Salt"],
-				"adjustableIngredients": ["No Salt", "Extra Salt"],
-                "Price": {"s": 2.75, "m": 3.50, "l": 4},
-                "Types": ["Sizes"]
+            "Sweet Potato Fries": {
+                "Ingredients": ["Sweet Potato Fries", "Salt"],
+                "adjustableIngredients": ["No Salt", "Extra Salt"],
+                "Price": 5
             },
-            "Drinks": {
-                "Ingredients": ["%flavour%", "Ice"],
-				"adjustableIngredients": ["No Ice"],
-                "Price": {"s": 3, "m": 3.75, "l": 4.20},
-                "Flavours": ["Coke", "Fanta", "Sprite"],
-                "Types": ["Sizes", "Flavours"]
+            "Coca Cola 375ml": {
+                "Ingredients": ["Coca Cola", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 4
             },
-            "Whopper": {
-                "Ingredients": ["Top Bun", "Mayonnaise", "Lettuce", "Tomato", "Onion", "Pickles", "Ketchup", "Bottom Bun"],
-				"adjustableIngredients": ["No Mayonnaise", "No Lettuce", "No Tomato", "No Onion", "No Pickles", "No Ketchup"],
-                "Price": 6,
-                "Types": ["Regular"]
+            "Lemon Lime Bitters": {
+                "Ingredients": ["Lemonade", "Lime Cordial", "Bitters", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 5
+            },
+            "Chocolate Brownie": {
+                "Ingredients": ["Chocolate", "Flour", "Sugar", "Butter", "Eggs"],
+                "adjustableIngredients": [],
+                "Price": 6
             }
         }
     },
     {
-        "store": "McDonalds",
+        "store": "Red Rooster",
         "menu": {
-            "BBQ Cheeseburger": {
-                "Ingredients": ["Top Bun", "Ketchup", "Mustard", "Cheese", "Beef Patty", "Bottom Bun"],
-				"adjustableIngredients": ["No Ketchup", "No Mustard", "No Cheese"],
-                "Price": 5,
-                "Types": ["Regular"]
+            "Roast Chicken Roll": {
+                "Ingredients": ["Roll", "Roast Chicken", "Lettuce", "Mayonnaise"],
+                "adjustableIngredients": ["No Lettuce", "No Mayonnaise"],
+                "Price": 8
             },
-            "Chicken Burger": {
-                "Ingredients": ["Top Bun", "Mayonnaise", "Chicken Patty", "Lettuce", "Bottom Bun"],
-				"adjustableIngredients": ["No Mayonnaise", "No Lettuce"],
-                "Price": 6,
-                "Types": ["Regular"]
+            "Chicken Nuggets": {
+                "Ingredients": ["Chicken", "Breading", "Salt"],
+                "adjustableIngredients": ["No Salt"],
+                "Price": 6
             },
             "Chips": {
                 "Ingredients": ["Chips", "Salt"],
-				"adjustableIngredients": ["No Salt", "Extra Salt"],
-                "Price": {"s": 2.75, "m": 3.50, "l": 4},
-                "Types": ["Sizes"]
+                "adjustableIngredients": ["No Salt", "Extra Salt"],
+                "Price": 3
             },
-            "Drinks": {
-                "Ingredients": ["%flavour%", "Ice"],
-				"adjustableIngredients": ["No Ice"],
-                "Price": {"s": 3, "m": 3.75, "l": 4.20},
-                "Flavours": ["Coke", "Fanta", "Sprite"],
-                "Types": ["Sizes", "Flavours"]
+            "Sprite 375ml": {
+                "Ingredients": ["Sprite", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 4
             },
-            "Whopper": {
-                "Ingredients": ["Top Bun", "Mayonnaise", "Lettuce", "Tomato", "Onion", "Pickles", "Ketchup", "Bottom Bun"],
-				"adjustableIngredients": ["No Mayonnaise", "No Lettuce", "No Tomato", "No Onion", "No Pickles", "No Ketchup"],
-                "Price": 6,
-                "Types": ["Regular"]
+            "Fanta 375ml": {
+                "Ingredients": ["Fanta", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 4
+            },
+            "Apple Pie": {
+                "Ingredients": ["Apple", "Pastry", "Sugar", "Cinnamon"],
+                "adjustableIngredients": [],
+                "Price": 4
             }
+        }
+    },
+    {
+        "store": "Oporto",
+        "menu": {
+            "Bondi Burger": {
+                "Ingredients": ["Top Bun", "Grilled Chicken", "Lettuce", "Tomato", "Chilli Sauce", "Bottom Bun"],
+                "adjustableIngredients": ["No Lettuce", "No Tomato", "No Chilli Sauce"],
+                "Price": 9
+            },
+            "Chicken Rappa": {
+                "Ingredients": ["Wrap", "Grilled Chicken", "Lettuce", "Tomato", "Mayonnaise"],
+                "adjustableIngredients": ["No Lettuce", "No Tomato", "No Mayonnaise"],
+                "Price": 8
+            },
+            "Chips": {
+                "Ingredients": ["Chips", "Salt"],
+                "adjustableIngredients": ["No Salt", "Extra Salt"],
+                "Price": 3
+            },
+            "Pepsi 375ml": {
+                "Ingredients": ["Pepsi", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 4
+            },
+            "Mountain Dew 375ml": {
+                "Ingredients": ["Mountain Dew", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 4
+            },
+            "Chocolate Mousse": {
+                "Ingredients": ["Chocolate", "Cream", "Sugar", "Eggs"],
+                "adjustableIngredients": [],
+                "Price": 5
+            }
+        }
+    },
+    {
+        "store": "Guzman y Gomez",
+        "menu": {
+            "Burrito": {
+                "Ingredients": ["Tortilla", "Rice", "Beans", "Chicken", "Cheese", "Salsa"],
+                "adjustableIngredients": ["No Rice", "No Beans", "No Cheese", "No Salsa"],
+                "Price": 11
+            },
+            "Tacos": {
+                "Ingredients": ["Taco Shell", "Beef", "Lettuce", "Cheese", "Salsa"],
+                "adjustableIngredients": ["No Lettuce", "No Cheese", "No Salsa"],
+                "Price": 9
+            },
+            "Nachos": {
+                "Ingredients": ["Tortilla Chips", "Cheese", "Beef", "Salsa", "Guacamole"],
+                "adjustableIngredients": ["No Cheese", "No Salsa", "No Guacamole"],
+                "Price": 10
+            },
+            "Jarritos Lime": {
+                "Ingredients": ["Jarritos Lime", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 5
+            },
+            "Jarritos Mango": {
+                "Ingredients": ["Jarritos Mango", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 5
+            },
+            "Churros": {
+                "Ingredients": ["Flour", "Sugar", "Cinnamon", "Chocolate Sauce"],
+                "adjustableIngredients": [],
+                "Price": 6
+            }
+        }
+    },
+    {
+        "store": "Nando's",
+        "menu": {
+            "Peri-Peri Chicken": {
+                "Ingredients": ["Chicken", "Peri-Peri Sauce"],
+                "adjustableIngredients": ["No Peri-Peri Sauce"],
+                "Price": 12
+            },
+            "Chicken Wrap": {
+                "Ingredients": ["Wrap", "Chicken", "Lettuce", "Tomato", "Peri-Peri Sauce"],
+                "adjustableIngredients": ["No Lettuce", "No Tomato", "No Peri-Peri Sauce"],
+                "Price": 9
+            },
+            "Peri-Peri Chips": {
+                "Ingredients": ["Chips", "Peri-Peri Salt"],
+                "adjustableIngredients": ["No Peri-Peri Salt", "Extra Peri-Peri Salt"],
+                "Price": 4
+            },
+            "Coca Cola 375ml": {
+                "Ingredients": ["Coca Cola", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 4
+            },
+            "Fanta 375ml": {
+                "Ingredients": ["Fanta", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 4
+            },
+            "Portuguese Tart": {
+                "Ingredients": ["Pastry", "Custard", "Sugar"],
+                "adjustableIngredients": [],
+                "Price": 4
+            }
+        }
+    },
+    {
+        "store": "Zambrero",
+        "menu": {
+            "Chicken Burrito": {
+                "Ingredients": ["Tortilla", "Rice", "Black Beans", "Chicken", "Cheese", "Salsa"],
+                "adjustableIngredients": ["No Rice", "No Beans", "No Cheese", "No Salsa"],
+                "Price": 11
+            },
+            "Beef Nachos": {
+                "Ingredients": ["Tortilla Chips", "Beef", "Cheese", "Sour Cream", "Guacamole"],
+                "adjustableIngredients": ["No Cheese", "No Sour Cream", "No Guacamole"],
+                "Price": 10
+            },
+            "Veggie Quesadilla": {
+                "Ingredients": ["Tortilla", "Cheese", "Bell Peppers", "Onions", "Salsa"],
+                "adjustableIngredients": ["No Cheese", "No Bell Peppers", "No Onions", "No Salsa"],
+                "Price": 9
+            },
+            "Jarritos Pineapple": {
+                "Ingredients": ["Jarritos Pineapple", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 5
+            },
+            "Jarritos Grapefruit": {
+                "Ingredients": ["Jarritos Grapefruit", "Ice"],
+                "adjustableIngredients": ["No Ice"],
+                "Price": 5
+            }
+        }
+    },
+    {
+        "store": "Sushi Train",
+        "menu": {
+            "Salmon Nigiri": {
+                "Ingredients": ["Salmon", "Sushi Rice", "Nori"],
+                "adjustableIngredients": ["No Nori"],
+                "Price": 4
+            },
+            "Chicken Teriyaki Roll": {
+                "Ingredients": ["Chicken Teriyaki", "Sushi Rice", "Nori", "Cucumber"],
+                "adjustableIngredients": ["No Cucumber", "No Nori"],
+                "Price": 5
+            },
+            "Avocado Roll": {
+                "Ingredients": ["Avocado", "Sushi Rice", "Nori"],
+                "adjustableIngredients": ["No Nori"],
+                "Price": 4
+            },
+            "Miso Soup": {
+                "Ingredients": ["Miso Paste", "Tofu", "Seaweed", "Green Onions"],
+                "adjustableIngredients": ["No Tofu", "No Seaweed", "No Green Onions"],
+                "Price": 3
+            },
+            "Green Tea": {
+                "Ingredients": ["Green Tea Leaves", "Water"],
+                "adjustableIngredients": [],
+                "Price": 2
+            }
+        }
+    },
+        {
+    "store": "Mad Mex",
+    "menu": {
+        "Chicken Burrito": {
+            "Ingredients": ["Tortilla", "Rice", "Black Beans", "Chicken", "Cheese", "Salsa"],
+            "adjustableIngredients": ["No Rice", "No Beans", "No Cheese", "No Salsa"],
+            "Price": 11
+        },
+        "Beef Nachos": {
+            "Ingredients": ["Tortilla Chips", "Beef", "Cheese", "Sour Cream", "Guacamole"],
+            "adjustableIngredients": ["No Cheese", "No Sour Cream", "No Guacamole"],
+            "Price": 10
+        },
+        "Veggie Quesadilla": {
+            "Ingredients": ["Tortilla", "Cheese", "Bell Peppers", "Onions", "Salsa"],
+            "adjustableIngredients": ["No Cheese", "No Bell Peppers", "No Onions", "No Salsa"],
+            "Price": 9
+        },
+        "Jarritos Pineapple": {
+            "Ingredients": ["Jarritos Pineapple", "Ice"],
+            "adjustableIngredients": ["No Ice"],
+            "Price": 5
+        },
+        "Jarritos Grapefruit": {
+            "Ingredients": ["Jarritos Grapefruit", "Ice"],
+            "adjustableIngredients": ["No Ice"],
+            "Price": 5
         }
     }
+},
+{
+    "store": "Boost Juice",
+    "menu": {
+        "Mango Magic": {
+            "Ingredients": ["Mango", "Banana", "Vanilla Yoghurt", "Ice"],
+            "adjustableIngredients": ["No Banana", "No Yoghurt", "No Ice"],
+            "Price": 7
+        },
+        "Berry Crush": {
+            "Ingredients": ["Strawberries", "Blueberries", "Raspberries", "Apple Juice", "Ice"],
+            "adjustableIngredients": ["No Ice"],
+            "Price": 7
+        },
+        "Protein Supreme": {
+            "Ingredients": ["Banana", "Peanut Butter", "Protein Powder", "Almond Milk", "Ice"],
+            "adjustableIngredients": ["No Peanut Butter", "No Ice"],
+            "Price": 8
+        },
+        "Green Tea Mango Mantra": {
+            "Ingredients": ["Mango", "Green Tea", "Vanilla Yoghurt", "Ice"],
+            "adjustableIngredients": ["No Green Tea", "No Yoghurt", "No Ice"],
+            "Price": 7
+        },
+        "Banana Buzz": {
+            "Ingredients": ["Banana", "Honey", "Vanilla Yoghurt", "Ice"],
+            "adjustableIngredients": ["No Honey", "No Yoghurt", "No Ice"],
+            "Price": 7
+        }
+    }
+}
 ]
