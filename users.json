@@ -1,53 +1,8 @@
 [
   {
-    "name": "fdsaadsf",
-    "email": "adfga@gmail.com",
-    "password": "adfafd"
-  },
-  {
-    "name": "Oscar",
+    "name": "Oscar McGann",
     "email": "oscarmcgann0708@gmail.com",
-    "password": "a",
+    "password": "myPassword",
     "cart": {}
-  },
-  {
-    "name": "Oscar",
-    "email": "oscarsotheremail@gmail.com",
-    "password": "hello"
-  },
-  {
-    "name": "Amelia",
-    "email": "fattyfatty12burger@gmail.com",
-    "password": "OMnomnomnom"
-  },
-  {
-    "name": "timmeh",
-    "email": "adfs@gmail.com",
-    "password": "asdfasdf"
-  },
-  {
-    "name": "Elzy123",
-    "email": "emaw@iinet.net.au",
-    "password": "penis"
-  },
-  {
-    "name": "BigDaddySchmacks",
-    "email": "oscar.cusick@gmail.com",
-    "password": "CumAnus"
-  },
-  {
-    "name": "Tim",
-    "email": "harstujohn@gmail.com",
-    "password": "CUMBLASTER",
-    "cart": [
-      {
-        "Top Bun": true,
-        "Onion": true,
-        "Tomato": true,
-        "Beef Patty": true,
-        "Lettuce": false,
-        "Bottom Bun": true
-      }
-    ]
   }
 ]

@@ -1,21 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("switch-form").addEventListener("click", () => {
-        if (window.location.href.includes("/login"))  {
+    document.getElementById("switch-form").addEventListener("click", () => { // the 'don't have an account? Register' and 'Already have an account? login' buttons
+        if (window.location.href.includes("/login"))  { // If the user is on the login page
             window.location.href = "/register";
         } else {
             window.location.href = "/login";
         }
     })
 
+	// Submit form event listener
     document.getElementById("submit-form").addEventListener("click", () => {
+		// Pull the values from the input fields
         const email = document.getElementById("input-email").value;
         const password = document.getElementById("input-password").value;
-        if (window.location.href.includes("/register")) {
+        if (window.location.href.includes("/register")) { // If on the register page
 
-            const name = document.getElementById("input-name").value;
+            const name = document.getElementById("input-name").value; // Get the name field that wouldn't be on the login page
 
-            data = { name, email, password } 
+            let data = { name, email, password }; // set the map which will be the user's data
 
+			// Register the user 
             fetch("/register", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
@@ -34,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Error:", error));
 
         } else if (window.location.href.includes("/login")) {
-            data = {email, password};
+            let data = { email, password };
             fetch("/login", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
@@ -51,6 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(data => console.log("Response:", data))
             .catch(error => console.error("Error:", error));
         }
-
-});
-});
+	})
+})

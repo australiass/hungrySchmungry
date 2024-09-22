@@ -29,6 +29,9 @@
     background-color: var(--accentblue);
     width: 25%;
     border: 1px solid black;
+	height: 84vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .storeTitle {
@@ -116,7 +119,9 @@ form#cardNumber {
 
 form#cardNumber>* {
     width: 3.5vw;
-    letter-spacing: auto;
+    letter-spacing: .15vw;
+	text-align: center;
+	font-size: 0.7vw;
 }
 
 input#csv {
@@ -127,4 +132,73 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
+}
+
+#checkoutInputs {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5vh;
+}
+
+#csvExpiryContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+#csv {
+	margin-left: auto;
+	font-size: 0.9vw;
+	letter-spacing: 0.1vw;
+	text-align: center;
+}
+
+#orderTotals {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+	font-size: 0.85vw;
+}
+
+#orderTotals>*:last-child {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 1vh 0;
+}
+
+#orderTotals>*, #address {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#address {
+	padding: 1vh 0;
+	border-bottom: 1px solid black;
+	margin-bottom: 1vh;
+}
+
+.orderButton {
+	display: flex;
+	margin-top: auto;
+	text-align: center;
+	vertical-align: center;
+	width: 24.5vw;
+	background-color: var(--pink);
+	height: 10%;
+	border-radius: 0 0 1vw 1vw;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	border-top: 1px solid black;
+	margin-bottom: -4.5%;
+	color: white;
+	font-size: 1.5vw;
+	font-weight: bold;
+	letter-spacing: 0.1vw;
+}
+
+.orderButton:hover {
+	filter: hue-rotate(15deg);
+    cursor: pointer;
 }

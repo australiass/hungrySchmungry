@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+	// Logout function, very straightforward
     document.getElementById("logout").addEventListener("click", () => {
-        console.log("clicked logout");
         fetch("/logout", {
             method: "POST",
             headers: {"Content-Type": "application/json"},

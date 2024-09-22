@@ -1,47 +1,51 @@
-<html lang="en"></html>
+<html lang="en">
+
+</html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		<%= title %>
+	</title>
 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/<%= title %>.css">
-    <script src="/js/<%= title %>.js"></script>
-    <%- include('partials/_navbar') %>
-    <script>
-    </script>
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/<%= title %>.css">
+	<script src="/js/<%= title %>.js"></script>
+	<%- include('partials/_navbar') %>
 </head>
 
 <body>
-    <div id="mainContainer">
-        <div id="cartDataContainer">
-            <%= JSON.stringify(userData) %>
-        </div>
-        <div id="checkoutContainer">
-            <h1>Checkout</h1>
-            <div id="checkoutContent"></div>
-            <div id="checkoutInputs">
-                <label>Card Number:</label>
-                <form id="cardNumber">
-                    <input type="number" id="cardNumber-1" maxlength="4">
-                    <input type="number" id="cardNumber-2" maxlength="4">
-                    <input type="number" id="cardNumber-3" maxlength="4">
-                    <input type="number" id="cardNumber-4" maxlength="4">
-                </form>
-                <label>CSV:</label>
-                <form id="csv">
-                    <input type="number" id="csv" maxlength="3">
-                </form>
-                <label>Expiry:</label>
-                <form id="expiry">
-                    <input type="date">
-                </form>
-            </div>
-        </div>
-    </div>
+	<div id="mainContainer">
+		<div id="cartDataContainer">
+			<%= JSON.stringify(userData) %>
+		</div>
+		<div id="checkoutContainer">
+			<h1 style="margin-bottom: 1.5vh; border-bottom: 1px solid black; padding-bottom: 1.2vh;">Checkout</h1>
+			<div id="checkoutContent"></div>
+			<div id="checkoutInputs">
+				<div style="font-size:1.2vw; font-weight: bold; margin-bottom: 1vh;">Payment Details</div>
+				<label style="margin-bottom: 0.5vh;">Card Number</label>
+				<form id="cardNumber">
+					<input type="number" class="1" id="cardNumberInput1" maxlength="4">-
+					<input type="number" class="2" id="cardNumberInput2" maxlength="4">-
+					<input type="number" class="3" id="cardNumberInput3" maxlength="4">-
+					<input type="number" class="4" id="cardNumberInput4" maxlength="4">
+				</form>
+				<div id="csvExpiryContainer">
+					<form id="expiry">
+						<label>Expiry</label>
+						<input type="date" id="expiryInput">
+					</form>
+					<form id="csv">
+						<label>CSV</label>
+						<input type="number" id="csvInput" maxlength="3">
+					</form>
+				</div>
+			</div>
+			<div class="orderButton" id="order">Place Order</div>
+		</div>
+	</div>
 </body>
 
 </html>
